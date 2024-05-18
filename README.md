@@ -1,23 +1,42 @@
-# AMO-Tools-Desktop
-### Downloads  ![Github Releases](https://img.shields.io/github/downloads/ORNL-AMO/AMO-Tools-Desktop/latest/total.svg?label=Current%20Release)  ![Github All Releases](https://img.shields.io/github/downloads/ORNL-AMO/AMO-Tools-Desktop/total.svg?label=All%20Time&colorB=afdffe)
-
-## Dependencies
-- Node.js LTS (https://nodejs.org/en/)
-    - Due to legacy dependencies required by MEASUR and the dependent AMO-Tool-Suite, **MEASUR's targeted Node version must be used**. This version can be found in package.json "engines".
-## Build for Development
-- To remove node modules, dist, and related package-lock: `npm run clean` from the root project directory.
-- To install all required packages: `npm install`
-- To build for electron development with hot-reload: `npm run build-watch`
-    - To start the electron app: `npm run electron`
-
-## Build Production Package
-- Clean and install:
-    - `npm run clean`
-    - `npm install`
-- To build desktop package:
-    - `npm run build-prod-desktop` 
-    - `npm run dist`
-    - The package will be placed in `../output`
-- To build web dist:
-    - `npm run build-prod-web` 
-
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AMO-工具-桌面</font></font></h1><a id="user-content-amo-tools-desktop" class="anchor" aria-label="永久链接：AMO-工具-桌面" href="#amo-tools-desktop"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载  </font></font><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e9709f16911895b36788e55204f2118ea0edf8ff52567fd9594510b1bc2adecf/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f4f524e4c2d414d4f2f414d4f2d546f6f6c732d4465736b746f702f6c61746573742f746f74616c2e7376673f6c6162656c3d43757272656e7425323052656c65617365"><img src="https://camo.githubusercontent.com/e9709f16911895b36788e55204f2118ea0edf8ff52567fd9594510b1bc2adecf/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f4f524e4c2d414d4f2f414d4f2d546f6f6c732d4465736b746f702f6c61746573742f746f74616c2e7376673f6c6162656c3d43757272656e7425323052656c65617365" alt="Github 发布" data-canonical-src="https://img.shields.io/github/downloads/ORNL-AMO/AMO-Tools-Desktop/latest/total.svg?label=Current%20Release" style="max-width: 100%;"></a>  <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/34b64b895a4edccf0cd1d8eb2b622bf9a476cbc19248bc3438f662edec8b2e10/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f4f524e4c2d414d4f2f414d4f2d546f6f6c732d4465736b746f702f746f74616c2e7376673f6c6162656c3d416c6c25323054696d6526636f6c6f72423d616664666665"><img src="https://camo.githubusercontent.com/34b64b895a4edccf0cd1d8eb2b622bf9a476cbc19248bc3438f662edec8b2e10/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f4f524e4c2d414d4f2f414d4f2d546f6f6c732d4465736b746f702f746f74616c2e7376673f6c6162656c3d416c6c25323054696d6526636f6c6f72423d616664666665" alt="Github 所有版本" data-canonical-src="https://img.shields.io/github/downloads/ORNL-AMO/AMO-Tools-Desktop/total.svg?label=All%20Time&amp;colorB=afdffe" style="max-width: 100%;"></a></h3><a id="user-content-downloads----" class="anchor" aria-label="永久链接：下载  " href="#downloads----"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖关系</font></font></h2><a id="user-content-dependencies" class="anchor" aria-label="永久链接：依赖关系" href="#dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Node.js LTS ( </font></font><a href="https://nodejs.org/en/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://nodejs.org/en/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">由于 MEASUR 和依赖的 AMO-Tool-Suite 需要遗留依赖项，因此</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">必须使用 MEASUR 的目标节点版本</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。这个版本可以在package.json“engines”中找到。</font></font></li>
+</ul>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为发展而建设</font></font></h2><a id="user-content-build-for-development" class="anchor" aria-label="永久链接：为发展而构建" href="#build-for-development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"></font><code>npm run clean</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从根项目目录中</font><font style="vertical-align: inherit;">删除节点模块、dist 和相关的 package-lock: 。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要安装所有必需的软件包：</font></font><code>npm install</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过热重载构建电子开发：</font></font><code>npm run build-watch</code>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">启动电子应用程序：</font></font><code>npm run electron</code></li>
+</ul>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建生产包</font></font></h2><a id="user-content-build-production-package" class="anchor" aria-label="永久链接：构建生产包" href="#build-production-package"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">清洁并安装：
+</font></font><ul dir="auto">
+<li><code>npm run clean</code></li>
+<li><code>npm install</code></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建桌面包：
+</font></font><ul dir="auto">
+<li><code>npm run build-prod-desktop</code></li>
+<li><code>npm run dist</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包裹将被放置在</font></font><code>../output</code></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建网络分布：
+</font></font><ul dir="auto">
+<li><code>npm run build-prod-web</code></li>
+</ul>
+</li>
+</ul>
+</article></div>
